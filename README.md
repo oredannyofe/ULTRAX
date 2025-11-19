@@ -45,7 +45,7 @@ Production dApp: **`https://ultrax.onrender.com`**
 
 ### 1. Install dependencies
 
-```bash path=null start=null
+```bash
 npm install
 ```
 
@@ -55,7 +55,7 @@ Use Node **18.x** or **20.x** to avoid dependency issues.
 
 This runs the React dev server and the Express backend together.
 
-```bash path=null start=null
+```bash
 npm start
 ```
 
@@ -68,16 +68,16 @@ Render is configured as a **Web Service**, not a static site. A typical configur
 
 - **Build command** (Yarn):
 
-  ```bash path=null start=null
+```bash
 yarn install --frozen-lockfile
 yarn build-ci
-  ```
+```
 
 - **Start command**:
 
-  ```bash path=null start=null
+```bash
 node server/index.js
-  ```
+```
 
 > `build-ci` is a lightweight wrapper around `react-app-rewired build` that skips tests and focuses on producing a production bundle suitable for the server to serve.
 
