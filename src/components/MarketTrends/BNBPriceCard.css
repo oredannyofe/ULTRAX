@@ -1,0 +1,84 @@
+.bnb-card {
+  border-radius: 16px;
+  color: #f9fafb;
+  padding: 18px 18px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: radial-gradient(circle at top left, rgba(148, 163, 184, 0.15), rgba(15, 23, 42, 0.98));
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(18px);
+}
+
+.bnb-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.bnb-card__title {
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  opacity: 0.9;
+}
+.bnb-card__pair {
+  font-weight: 500;
+  font-size: 11px;
+  opacity: 0.8;
+}
+.bnb-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bnb-card__body--list {
+  margin-top: 8px;
+}
+
+.bnb-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 0;
+}
+
+.bnb-row__left {
+  display: flex;
+  flex-direction: column;
+}
+
+.bnb-row__symbol {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.bnb-row__name {
+  font-size: 11px;
+  opacity: 0.65;
+}
+
+.bnb-row__right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.bnb-row__price,
+.bnb-card__price {
+  font-size: 16px;
+  font-weight: 700;
+  color: #e5e7eb;
+}
+
+.bnb-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+.bnb-card__delta.up { color: #4ade80; }
+.bnb-card__delta.down { color: #f87171; }
