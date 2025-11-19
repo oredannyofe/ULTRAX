@@ -29,7 +29,7 @@ import {
   parseValue,
 } from "lib/numbers";
 import ExternalLink from "components/ExternalLink/ExternalLink";
-import { t, Trans } from "@lingui/macro";
+import { t, Trans } from "lib/translation";
 
 const { MaxUint256, AddressZero } = ethers.constants;
 

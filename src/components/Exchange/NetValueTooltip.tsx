@@ -1,4 +1,4 @@
-import { Trans, t } from "@lingui/macro";
+import { Trans, t } from "lib/translation";
 import StatsTooltipRow from "components/StatsTooltip/StatsTooltipRow";
 import Tooltip from "components/Tooltip/Tooltip";
 import { Position } from "domain/positions/types";

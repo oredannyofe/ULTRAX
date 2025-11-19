@@ -16,7 +16,7 @@ import { bigNumberify, expandDecimals, formatAmount } from "./numbers";
 import { isValidToken } from "config/tokens";
 import { useChainId } from "./chains";
 import { isValidTimestamp } from "./dates";
-import { t } from "@lingui/macro";
+import { t } from "lib/translation";
 import { isLocal } from "config/env";
 
 const { AddressZero } = ethers.constants;

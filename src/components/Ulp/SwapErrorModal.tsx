@@ -5,7 +5,7 @@ import Modal from "../Modal/Modal";
 import { get1InchSwapUrl } from "config/links";
 import { getLowestFeeTokenForBuyGlp, InfoTokens, Token } from "domain/tokens";
 import { getNativeToken } from "config/tokens";
-import { t, Trans } from "@lingui/macro";
+import { t, Trans } from "lib/translation";
 import ExternalLink from "components/ExternalLink/ExternalLink";
 
 const { AddressZero } = ethers.constants;

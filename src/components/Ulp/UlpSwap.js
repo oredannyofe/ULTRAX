@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import { Trans, t } from "@lingui/macro";
+import { Trans, t } from "lib/translation";
 import { useWeb3React } from "@web3-react/core";
 import useSWR from "swr";
 import { ethers } from "ethers";

@@ -5,7 +5,7 @@ import metamaskIcon from "img/ic_metamask_16.svg";
 import nansenPortfolioIcon from "img/nansen_portfolio.svg";
 import { useWeb3React } from "@web3-react/core";
 
-import { t, Trans } from "@lingui/macro";
+import { t, Trans } from "lib/translation";
 import ExternalLink from "components/ExternalLink/ExternalLink";
 import { ICONLINKS, PLATFORM_TOKENS } from "config/tokens";
 import { addTokenToMetamask } from "lib/wallets";

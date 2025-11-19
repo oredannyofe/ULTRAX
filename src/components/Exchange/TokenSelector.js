@@ -12,7 +12,7 @@ import TooltipWithPortal from "../Tooltip/TooltipWithPortal";
 import { bigNumberify, expandDecimals, formatAmount } from "lib/numbers";
 import { getToken } from "config/tokens";
 import { importImage } from "lib/legacy";
-import { t } from "@lingui/macro";
+import { t } from "lib/translation";
 import { useMedia } from "react-use";
 
 export default function TokenSelector(props) {

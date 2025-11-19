@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from "react";
-import { t, Trans } from "@lingui/macro";
+import { t, Trans } from "lib/translation";
 import cancelX from "../../img/cancelX.svg";
 import {
   SWAP,

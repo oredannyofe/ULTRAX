@@ -28,7 +28,7 @@ import { getUsd } from "./tokens/utils";
 import { getProvider } from "lib/rpc";
 import { bigNumberify, expandDecimals, parseValue } from "lib/numbers";
 import { getTokenBySymbol } from "config/tokens";
-import { t } from "@lingui/macro";
+import { t } from "lib/translation";
 
 export * from "./prices";
 

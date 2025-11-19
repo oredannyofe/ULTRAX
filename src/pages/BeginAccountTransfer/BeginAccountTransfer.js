@@ -16,7 +16,7 @@ import RewardRouter from "abis/RewardRouter.json";
 
 import { FaCheck, FaTimes } from "react-icons/fa";
 
-import { Trans, t } from "@lingui/macro";
+import { Trans, t } from "lib/translation";
 
 import "./BeginAccountTransfer.css";
 import { callContract, contractFetcher } from "lib/contracts";

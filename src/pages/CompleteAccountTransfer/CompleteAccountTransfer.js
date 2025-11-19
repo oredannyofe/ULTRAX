@@ -13,7 +13,7 @@ import RewardRouter from "abis/RewardRouter.json";
 
 import "./CompleteAccountTransfer.css";
 
-import { Trans, t } from "@lingui/macro";
+import { Trans, t } from "lib/translation";
 import { callContract } from "lib/contracts";
 import { helperToast } from "lib/helperToast";
 import { useChainId } from "lib/chains";

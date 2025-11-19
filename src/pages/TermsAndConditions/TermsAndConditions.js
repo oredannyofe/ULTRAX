@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "components/Footer/Footer";
 import SEO from "components/Common/SEO";
-import { t } from "@lingui/macro";
+import { t } from "lib/translation";
 import { getPageTitle } from "lib/legacy";
 import "./TermsAndConditions.css";
 

@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
 import { Link } from "react-router-dom";
-import { Trans } from "@lingui/macro";
+import { Trans } from "lib/translation";
 import { isHomeSite } from "lib/legacy";
 import { useWeb3React } from "@web3-react/core";
 import Button from "components/Button/Button";

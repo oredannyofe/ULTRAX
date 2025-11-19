@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Trans, t } from "@lingui/macro";
+import { Trans, t } from "lib/translation";
 import Modal from "../Modal/Modal";
 import Checkbox from "../Checkbox/Checkbox";
 

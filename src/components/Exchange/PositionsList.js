@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import cx from "classnames";
-import { Trans, t } from "@lingui/macro";
+import { Trans, t } from "lib/translation";
 import Tooltip from "../Tooltip/Tooltip";
 import PositionSeller from "./PositionSeller";
 import PositionEditor from "./PositionEditor";

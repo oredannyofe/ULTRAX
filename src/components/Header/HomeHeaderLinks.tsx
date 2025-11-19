@@ -1,7 +1,7 @@
 // @ts-nocheck
 import { FiX } from "react-icons/fi";
 import logoImg from "img/dashboard_utx_icon.svg";
-import { t } from "@lingui/macro";
+import { t } from "lib/translation";
 
 import "./Header.css";
 import { Link } from "react-router-dom";

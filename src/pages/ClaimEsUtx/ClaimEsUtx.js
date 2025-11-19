@@ -16,7 +16,7 @@ import "./ClaimEsUtx.css";
 import arbitrumIcon from "img/ic_arbitrum_96.svg";
 import avaIcon from "img/ic_avalanche_96.svg";
 
-import { Trans, t } from "@lingui/macro";
+import { Trans, t } from "lib/translation";
 import { ARBITRUM } from "config/chains";
 import { callContract, contractFetcher } from "lib/contracts";
 import { bigNumberify, formatAmount, formatAmountFree, parseValue } from "lib/numbers";

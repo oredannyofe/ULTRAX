@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import UlpSwap from "components/Ulp/UlpSwap";
 import Footer from "components/Footer/Footer";
 import "./BuyUlp.css";
-import { Trans } from "@lingui/macro";
+import { Trans } from "lib/translation";
 
 export default function BuyUlp(props) {
   const history = useHistory();

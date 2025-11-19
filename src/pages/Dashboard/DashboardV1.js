@@ -12,7 +12,7 @@ import YieldToken from "abis/YieldToken.json";
 
 import "./Dashboard.css";
 
-import { t, Trans } from "@lingui/macro";
+import { t, Trans } from "lib/translation";
 import ExternalLink from "components/ExternalLink/ExternalLink";
 import metamaskImg from "img/metamask.png";
 import coingeckoImg from "img/coingecko.png";

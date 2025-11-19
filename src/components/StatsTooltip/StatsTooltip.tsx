@@ -1,4 +1,4 @@
-import { Trans } from "@lingui/macro";
+import { Trans } from "lib/translation";
 import { BigNumber } from "ethers";
 import { USD_DECIMALS } from "lib/legacy";
 import "./StatsTooltip.css";

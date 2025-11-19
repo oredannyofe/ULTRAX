@@ -65,7 +65,7 @@ import Jobs from "pages/Jobs/Jobs";
 
 import { i18n } from "@lingui/core";
 import { I18nProvider } from "@lingui/react";
-import { Trans, t } from "@lingui/macro";
+import { Trans, t } from "lib/translation";
 import { defaultLocale } from "lib/i18n";
 import { Header } from "components/Header/Header";
 import { ARBITRUM, FTM_TESTNET, getAlchemyWsUrl, getExplorerUrl, U2U_TESTNET } from "config/chains";

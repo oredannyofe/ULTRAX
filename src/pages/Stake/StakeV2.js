@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from "react";
-import { Trans, t } from "@lingui/macro";
+import { Trans, t } from "lib/translation";
 import { useWeb3React } from "@web3-react/core";
 import { Link } from "react-router-dom";
 import WETH from "abis/WETH.json";

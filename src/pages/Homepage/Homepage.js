@@ -1,6 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import { Trans } from "@lingui/macro";
+import { Trans } from "lib/translation";
 import BNBPriceCard from "components/MarketTrends/BNBPriceCard";
 import "./Homepage.css";
 

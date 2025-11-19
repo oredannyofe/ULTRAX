@@ -5,7 +5,7 @@ import { useWeb3React } from "@web3-react/core";
 import ERC721 from "abis/ERC721.json";
 
 import "./NftWallet.css";
-import { t, Trans } from "@lingui/macro";
+import { t, Trans } from "lib/translation";
 import { callContract } from "lib/contracts";
 import { useChainId } from "lib/chains";
 

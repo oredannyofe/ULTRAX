@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import useSWR from "swr";
-import { Trans, t } from "@lingui/macro";
+import { Trans, t } from "lib/translation";
 import { ethers } from "ethers";
 import { BsArrowRight } from "react-icons/bs";
 

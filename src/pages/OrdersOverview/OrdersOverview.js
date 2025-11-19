@@ -19,7 +19,7 @@ import {
 } from "lib/legacy";
 
 import "./OrdersOverview.css";
-import { t, Trans } from "@lingui/macro";
+import { t, Trans } from "lib/translation";
 import { getTokenInfo } from "domain/tokens/utils";
 import { useInfoTokens } from "domain/tokens";
 import { formatAmount } from "lib/numbers";

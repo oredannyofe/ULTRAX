@@ -5,7 +5,7 @@ import { extractError, NETWORK_CHANGED, NOT_ENOUGH_FUNDS, RPC_ERROR, SLIPPAGE, U
 import { getGasLimit, setGasPrice } from "./utils";
 import { getChainName, getExplorerUrl } from "config/chains";
 import { switchNetwork } from "lib/wallets";
-import { t, Trans } from "@lingui/macro";
+import { t, Trans } from "lib/translation";
 import ExternalLink from "components/ExternalLink/ExternalLink";
 import { ethers } from "ethers"
 

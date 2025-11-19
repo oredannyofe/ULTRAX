@@ -1,4 +1,4 @@
-import { t } from "@lingui/macro";
+import { t } from "lib/translation";
 import "./Footer.css";
 import twitterIcon from "img/ic_twitter.svg";
 import discordIcon from "img/ic_discord.svg";

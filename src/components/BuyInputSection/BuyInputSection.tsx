@@ -1,7 +1,7 @@
 import "./BuyInputSection.scss";
 import React, { useRef, ChangeEvent } from "react";
 import cx from "classnames";
-import { Trans } from "@lingui/macro";
+import { Trans } from "lib/translation";
 
 type Props = {
   topLeftLabel: string;

@@ -24,7 +24,7 @@ import { getExplorerUrl } from "config/chains";
 import { bigNumberify, formatAmount } from "lib/numbers";
 import { formatDateTime, formatTime, formatDate } from "lib/dates";
 import StatsTooltipRow from "../StatsTooltip/StatsTooltipRow";
-import { t, Trans } from "@lingui/macro";
+import { t, Trans } from "lib/translation";
 import ExternalLink from "components/ExternalLink/ExternalLink";
 import Button from "components/Button/Button";
 

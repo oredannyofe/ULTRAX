@@ -19,7 +19,7 @@ import {
   WALLET_LINK_LOCALSTORAGE_PREFIX,
 } from "config/localStorage";
 import { helperToast } from "../helperToast";
-import { t, Trans } from "@lingui/macro";
+import { t, Trans } from "lib/translation";
 
 import { Web3ReactManagerFunctions } from "@web3-react/core/dist/types";
 import { UserRejectedRequestError, WalletConnectConnector } from "./WalletConnectConnector";

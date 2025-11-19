@@ -31,7 +31,7 @@ import { useLocalStorageSerializeKey } from "lib/localStorage";
 import { SLIPPAGE_BPS_KEY } from "config/localStorage";
 import { expandDecimals, formatAmount } from "lib/numbers";
 import { getToken, getWrappedToken } from "config/tokens";
-import { Plural, t, Trans } from "@lingui/macro";
+import { Plural, t, Trans } from "lib/translation";
 import Button from "components/Button/Button";
 import FeesTooltip from "./FeesTooltip";
 import { getTokenInfo, getUsd } from "domain/tokens";

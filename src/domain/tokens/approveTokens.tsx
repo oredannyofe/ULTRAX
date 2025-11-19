@@ -5,7 +5,7 @@ import { helperToast } from "lib/helperToast";
 import { InfoTokens, TokenInfo } from "./types";
 import { Web3Provider } from "@ethersproject/providers";
 import ExternalLink from "components/ExternalLink/ExternalLink";
-import { t, Trans } from "@lingui/macro";
+import { t, Trans } from "lib/translation";
 
 type Params = {
   setIsApproving: (val: boolean) => void;

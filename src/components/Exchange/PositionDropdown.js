@@ -1,5 +1,5 @@
 import { Menu } from "@headlessui/react";
-import { Trans } from "@lingui/macro";
+import { Trans } from "lib/translation";
 import { HiDotsVertical } from "react-icons/hi";
 import { AiOutlineEdit } from "react-icons/ai";
 import { BiSelectMultiple } from "react-icons/bi";

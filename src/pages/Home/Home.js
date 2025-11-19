@@ -20,7 +20,7 @@ import arbitrumIcon from "img/ic_arbitrum_96.svg";
 import avaxIcon from "img/ic_avalanche_96.svg";
 
 import TokenCard from "components/TokenCard/TokenCard";
-import { Trans } from "@lingui/macro";
+import { Trans } from "lib/translation";
 import { HeaderLink } from "components/Header/HeaderLink";
 import { ARBITRUM } from "config/chains";
 import { getServerUrl } from "config/backend";

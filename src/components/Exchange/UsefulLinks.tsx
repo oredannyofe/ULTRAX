@@ -1,4 +1,4 @@
-import { Trans } from "@lingui/macro";
+import { Trans } from "lib/translation";
 import ExternalLink from "components/ExternalLink/ExternalLink";
 import { getLeaderboardLink } from "config/links";
 import cx from "classnames";

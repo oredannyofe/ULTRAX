@@ -1,6 +1,6 @@
 import Footer from "components/Footer/Footer";
 import "./BuyUTX.css";
-import { Trans, t } from "@lingui/macro";
+import { Trans, t } from "lib/translation";
 import Button from "components/Button/Button";
 import { ARBITRUM, getChainName } from "config/chains";
 import { useChainId } from "lib/chains";

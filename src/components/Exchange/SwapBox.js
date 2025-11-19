@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useMemo, useState } from "react";
 import Tooltip from "../Tooltip/Tooltip";
-import { t, Trans } from "@lingui/macro";
+import { t, Trans } from "lib/translation";
 import "./SwapBox.scss";
 
 import useSWR from "swr";

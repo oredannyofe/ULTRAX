@@ -1,4 +1,4 @@
-import { Trans } from "@lingui/macro";
+import { Trans } from "lib/translation";
 import { useWeb3React } from "@web3-react/core";
 import cx from "classnames";
 

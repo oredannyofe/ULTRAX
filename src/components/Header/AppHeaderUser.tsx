@@ -8,7 +8,7 @@ import React, { useCallback, useEffect } from "react";
 import "./Header.css";
 import { isHomeSite, getAccountUrl } from "lib/legacy";
 import cx from "classnames";
-import { Trans } from "@lingui/macro";
+import { Trans } from "lib/translation";
 import NetworkDropdown from "../NetworkDropdown/NetworkDropdown";
 import LanguagePopupHome from "../NetworkDropdown/LanguagePopupHome";
 import { ARBITRUM, getChainName } from "config/chains";

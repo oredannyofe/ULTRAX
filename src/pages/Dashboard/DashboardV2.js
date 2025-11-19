@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useWeb3React } from "@web3-react/core";
-import { Trans, t } from "@lingui/macro";
+import { Trans, t } from "lib/translation";
 import useSWR from "swr";
 import { PieChart, Pie, Cell, Tooltip } from "recharts";
 import TooltipComponent from "components/Tooltip/Tooltip";

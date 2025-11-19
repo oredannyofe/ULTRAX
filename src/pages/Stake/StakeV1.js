@@ -17,7 +17,7 @@ import Modal from "components/Modal/Modal";
 import Footer from "components/Footer/Footer";
 
 import "./Stake.css";
-import { t, Trans } from "@lingui/macro";
+import { t, Trans } from "lib/translation";
 import { CHAIN_ID, getExplorerUrl } from "config/chains";
 import { contractFetcher } from "lib/contracts";
 import { approveTokens } from "domain/tokens";

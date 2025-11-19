@@ -17,7 +17,7 @@ import OrdersList from "components/Exchange/OrdersList";
 import TradeHistory from "components/Exchange/TradeHistory";
 import Reader from "abis/Reader.json";
 
-import { Trans, t } from "@lingui/macro";
+import { Trans, t } from "lib/translation";
 import { getServerBaseUrl } from "config/backend";
 import { contractFetcher } from "lib/contracts";
 import { useInfoTokens } from "domain/tokens";

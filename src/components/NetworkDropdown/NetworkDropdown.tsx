@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { Menu } from "@headlessui/react";
 import ModalWithPortal from "../Modal/ModalWithPortal";
-import { t, Trans } from "@lingui/macro";
+import { t, Trans } from "lib/translation";
 import cx from "classnames";
 import { HiDotsVertical } from "react-icons/hi";
 import "./NetworkDropdown.css";

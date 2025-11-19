@@ -1,5 +1,5 @@
 import React from "react";
-import { Trans } from "@lingui/macro";
+import { Trans } from "lib/translation";
 import SEO from "components/Common/SEO";
 
 import Footer from "components/Footer/Footer";
@@ -8,7 +8,7 @@ import { getPageTitle } from "lib/legacy";
 import "./Ecosystem.css";
 import ExternalLink from "components/ExternalLink/ExternalLink";
 import { ARBITRUM } from "config/chains";
-import { t } from "@lingui/macro";
+import { t } from "lib/translation";
 import { getIcon } from "config/icons";
 
 const NETWORK_ICONS = {
