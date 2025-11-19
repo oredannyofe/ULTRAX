@@ -1,93 +1,179 @@
-## How to run our project?
+# ULTRAX – Arbitrum‑First Perpetual DEX
 
-### Install dependencies
+ULTRAX is a GMX‑style perpetual DEX fork refocused on **Arbitrum**. It exposes a React + TypeScript trading interface backed by an Express server and ethers.js, enabling leveraged trading, liquidity provision, and staking for the UTX / ULP token system.
 
-```bash
-  npm install
+Production dApp: **`https://ultrax.onrender.com`**
+
+---
+
+## Features
+
+- **Perpetual trading interface**
+  - Leverage trading on major assets with on‑chain execution
+  - Integrated TradingView‑style charting and order history
+  - Wallet‑aware UI (balances, open positions, collateral, PnL)
+
+- **Arbitrum‑focused deployment**
+  - Default network and routing configured for Arbitrum
+  - Arbitrum metrics highlighted on the homepage
+
+- **Liquidity and staking**
+  - UTX (utility / governance) and ULP (liquidity index) tokens
+  - Staking flows, vesting, and fee revenue distribution
+
+- **Unified dashboard**
+  - 24h volume, open interest and pool metrics
+  - Token and index composition views for UTX / ULP
+
+- **Backend API layer**
+  - Express server serving the compiled React app
+  - REST helpers (e.g. BNB price tracker) and Web3 utilities
+
+---
+
+## Tech Stack
+
+- **Frontend**: React 17, TypeScript, react‑router, react‑toastify
+- **Styling**: CSS modules, custom design system, responsive layout
+- **Web3**: ethers.js, web3‑react, WalletConnect, MetaMask / Coinbase Wallet support
+- **Backend**: Node.js + Express, simple API + static asset serving
+- **Build tooling**: Create React App + `react-app-rewired`, custom webpack override, Yarn scripts
+
+---
+
+## Getting Started
+
+### 1. Install dependencies
+
+```bash path=null start=null
+npm install
 ```
-Use node version **18 or 20** to avoid dependency issues.
 
-### Start the server
+Use Node **18.x** or **20.x** to avoid dependency issues.
 
-```bash
-  npm start
+### 2. Start the app (local development)
+
+This runs the React dev server and the Express backend together.
+
+```bash path=null start=null
+npm start
 ```
 
-### BNB Price Tracker (new)
-- Backend endpoint: `GET /api/bnb-price` returns `{ price, lastUpdated, up }`
-- 6s cache, ±0–2% simulated drift, 10 req/min/IP limit, CORS restricted to `FRONTEND_ORIGIN`
-- Homepage “Market Trends” card polls every 10s with dynamic background
-- See full docs: `docs/BNB_PRICE_TRACKER.md`
+- Frontend dev server: `http://localhost:3000`
+- Backend (Express): serves API routes and the built bundle in production
 
-## Introduction
+### 3. Production build (Render / CI)
 
-**Website:**
+Render is configured as a **Web Service**, not a static site. A typical configuration is:
 
-#### UI Screenshots
+- **Build command** (Yarn):
 
-The following screenshots show key sections of the ULTRAX dApp (served from `public/images`):
+  ```bash path=null start=null
+yarn install --frozen-lockfile
+yarn build-ci
+  ```
 
-- Homepage
+- **Start command**:
+
+  ```bash path=null start=null
+node server/index.js
+  ```
+
+> `build-ci` is a lightweight wrapper around `react-app-rewired build` that skips tests and focuses on producing a production bundle suitable for the server to serve.
+
+---
+
+## BNB Price Tracker (API)
+
+The project includes a small backend utility used on the homepage **“Live market trends”** card.
+
+- Endpoint: `GET /api/bnb-price`
+- Response shape: `{ price, lastUpdated, up }`
+- Caching and limits:
+  - 6s in‑memory cache
+  - Simulated ±0–2% drift between refreshes
+  - 10 requests / minute / IP
+  - CORS restricted to the configured `FRONTEND_ORIGIN`
+- Further details: `docs/BNB_PRICE_TRACKER.md`
+
+---
+
+## Application Modules
+
+### Trade
+
+The **Trade** page exposes the core perpetual trading interface:
+
+- Real‑time price chart for the selected market
+- Last 24h **high / low**, **volume**, and **open interest**
+- Order ticket with collateral, leverage, long/short selection and validation
+- Open positions, pending orders and recent trade history
+
+### Dashboard
+
+The **Dashboard** aggregates protocol‑level data:
+
+- **24h volume** and **open interest** across markets
+- Long vs short exposure
+- Liquidity pool size and utilization
+- Composition and stats for **UTX** and **ULP**
+
+### Earn
+
+The **Earn** section focuses on staking and rewards:
+
+- Overview of the connected wallet (UTX, esUTX, ULP balances, claimable rewards)
+- Stake / unstake flows for UTX and ULP
+- Per‑pool stats: total staked, reward token price, APR, multipliers
+- Vesting / vault views to convert rewards into UTX and manage vesting positions
+
+### Buy
+
+The **Buy** page simplifies acquiring protocol tokens:
+
+- Guides to purchase **UTX** and **ULP** using supported on‑ramps / exchanges
+- UTX captures **30%** of platform fees as the governance / utility token
+- ULP captures **70%** of fees as the liquidity provider index token
+- Ability to buy or sell ULP directly against supported assets (e.g. ETH, USDT, BTC, BNB)
+
+---
+
+## UI Screenshots
+
+Screenshots are stored under `public/images` and rendered below for quick reference.
+
+- **Homepage**
 
   ![ULTRAX Homepage](public/images/ultrax-home.png)
 
-- Trade
+- **Trade**
 
   ![ULTRAX Trade](public/images/ultrax-trade.png)
 
-- Earn
+- **Earn**
 
   ![ULTRAX Earn](public/images/ultrax-earn.png)
 
-- Buy
+- **Buy**
 
   ![ULTRAX Buy](public/images/ultrax-buy.png)
 
-- Dashboard
+- **Dashboard**
 
   ![ULTRAX Dashboard](public/images/ultrax-dashboard.png)
 
-#### Overview of the Website
+---
 
-The website offers a comprehensive platform for trading and managing cryptocurrency assets, featuring four main modules: **Trade**, **Dashboard**, **Earn**, and **Buy**. Each module is designed to provide users with essential tools and information for effective trading and investment.
+## Development Notes
 
-#### 1. Trade
+- TypeScript is used across most of the codebase; a few legacy UI files are `// @ts-nocheck` to work around React 17 vs new `@types/react` mismatches.
+- Custom webpack overrides (`config-overrides.js`) are used for:
+  - Lingui `.po` loader (historical i18n support)
+  - Polyfills for certain Node built‑ins in the browser
+- The i18n layer has been simplified so that UI text renders in source English by default, avoiding hashed message IDs in production.
 
-In the **Trade** section, users can access a detailed trading view graph for selected tokens. Key features include:
+---
 
-- **Current Token Price**, **Token Volume**, and **High/Low Price** over the last 24 hours.
-- A comprehensive **Trading History** and an overview of the user's **Wallet Position**, including both **Sell** and **Buy Token Orders**.
+## License
 
-The **Exchange** section allows users to select tokens, specify amounts, set leverage, and choose the type of exchange action. The wallet's token amounts are automatically populated in the interface for convenience.
-
-#### 2. Dashboard
-
-The **Dashboard** provides a snapshot of the exchange's current status, displaying vital statistics such as:
-
-- **24h Volume**
-- **Open Interest**
-- **Long and Short Positions**
-- An overview of the **Liquidity Pool**
-- Total statistics for the exchange
-- Insights into governance tokens, specifically **UTX** and **ULP**
-- **ULP/UTX Index Composition**, which details the pairings within the liquidity pool.
-
-#### 3. Earn
-
-The **Earn** module focuses on staking UTX and ULP tokens to earn rewards (esUTX). Key features include:
-
-- An overview of the connected wallet, showing owned tokens (UTX, esUTX, ULP) and claimable rewards.
-- Options to buy tokens for staking, unstake tokens from pools, and claim rewards from each pool.
-- Detailed information on **Staking Pools**, including total staked tokens, reward token prices, total supply, and APR/multiplier points.
-- A **Vault Vesting** feature that allows users to convert rewards to UTX, deposit or withdraw rewards, and claim UTX.
-
-#### 4. Buy
-
-In the **Buy** section, users can easily purchase UTX or ULP using their preferred payment methods. 
-
-- **UTX** serves as the utility and governance token, accruing **30%** of the platform's generated fees.
-- **ULP** is the liquidity provider token, accruing **70%** of the platform's generated fees.
-
-Users can buy UTX from decentralized exchanges or centralized services, with links provided for easy access. Additionally, users can buy or sell ULP directly from the exchange, including transactions involving listed tokens like ETH, USDT, BTC, and BNB.
-
-This platform is designed to empower users with the tools and information necessary for successful trading and investment in the cryptocurrency market.
+This project is based on an open‑source perpetual DEX fork. Please review the upstream license and this repository’s license file (if present) before using ULTRAX in production or for commercial purposes.
