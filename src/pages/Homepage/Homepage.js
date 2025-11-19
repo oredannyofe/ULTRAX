@@ -209,55 +209,62 @@ const Homepage = () => {
         </section>
 
         {/* NETWORK OVERVIEW */}
-        <section id="network" className="space_section">
+        <section id="network" className="homepage-network-section">
           <div className="container">
-            <hgroup className="title-main">
-              <h2>
+            <div className="homepage-section-header">
+              <div className="homepage-section-eyebrow">
+                <Trans>Arbitrum ecosystem</Trans>
+              </div>
+              <h2 className="homepage-section-title">
                 <Trans>Built on Arbitrum</Trans>
               </h2>
-            </hgroup>
-            <article>
-              <div className="row">
-                <div className="col-12 col-lg-7 order-a">
-                  <h6>
-                    <Trans>Arbitrum network metrics</Trans>
-                  </h6>
-                  <ul>
-                    <li>
-                      <span>
-                        <Trans>Total volume</Trans>:
-                      </span>{" "}
-                      <strong>$1,413,184,702</strong>
-                    </li>
-                    <li>
-                      <span>
-                        <Trans>Total value locked</Trans>:
-                      </span>{" "}
-                      <strong>$5,711,914</strong>
-                    </li>
-                    <li>
-                      <span>
-                        <Trans>Total fees</Trans>:
-                      </span>{" "}
-                      <strong>$2,515,491</strong>
-                    </li>
-                  </ul>
-                </div>
-                <div className="col-12 col-lg-5 order-b">
-                  <img src="images/logo-vertical.svg" alt="Unicorn Ultra logo" />
-                  <div className="text-a">
-                    <button
-                      type="button"
-                      className="btn-a btn-blue"
-                      style={{ cursor: "pointer", userSelect: "none" }}
-                      onClick={goToTrade}
-                    >
-                      <Trans>Start trading on Arbitrum</Trans>
-                    </button>
-                  </div>
+            </div>
+
+            <div className="row align-items-center">
+              <div className="col-12 col-lg-7">
+                <h6 className="homepage-network-subtitle">
+                  <Trans>Arbitrum network metrics</Trans>
+                </h6>
+                <ul className="homepage-network-metrics-list">
+                  <li>
+                    <span>
+                      <Trans>Total volume</Trans>:
+                    </span>
+                    <strong>$1,413,184,702</strong>
+                  </li>
+                  <li>
+                    <span>
+                      <Trans>Total value locked</Trans>:
+                    </span>
+                    <strong>$5,711,914</strong>
+                  </li>
+                  <li>
+                    <span>
+                      <Trans>Total fees</Trans>:
+                    </span>
+                    <strong>$2,515,491</strong>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="col-12 col-lg-5">
+                <div className="homepage-network-card">
+                  <p className="homepage-network-copy">
+                    <Trans>
+                      ULTRAX is deployed on Arbitrum to give traders deep liquidity, low fees and fast finality while
+                      staying fully on-chain.
+                    </Trans>
+                  </p>
+                  <button
+                    type="button"
+                    className="homepage-cta-primary homepage-network-cta"
+                    onClick={goToTrade}
+                  >
+                    <Trans>Start trading on Arbitrum</Trans>
+                  </button>
                 </div>
               </div>
-            </article>
+            </div>
           </div>
         </section>
 
