@@ -1,12 +1,12 @@
 import "./ToggleSwitch.scss";
-import { ReactNode } from "react";
+import React from "react";
 import cx from "classnames";
 
 type Props = {
   isChecked: boolean;
   setIsChecked: (value: boolean) => void;
   className?: string;
-  children?: ReactNode;
+  children?: any;
 };
 
 export default function ToggleSwitch({ isChecked, setIsChecked, className, children }: Props) {

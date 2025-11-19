@@ -1,5 +1,5 @@
 import "./BuyInputSection.scss";
-import React, { useRef, ReactNode, ChangeEvent } from "react";
+import React, { useRef, ChangeEvent } from "react";
 import cx from "classnames";
 import { Trans } from "@lingui/macro";
 
@@ -9,7 +9,7 @@ type Props = {
   inputValue: string | number;
   showMaxButton: boolean;
   staticInput: boolean;
-  children: ReactNode;
+  children: any;
   balance?: string | number;
   tokenBalance?: string | number;
   onClickMax?: () => void;

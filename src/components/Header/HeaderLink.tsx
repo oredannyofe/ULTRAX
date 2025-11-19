@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import cx from "classnames";
 import { getAppBaseUrl, getHomeUrl } from "lib/legacy";
@@ -15,7 +15,7 @@ type Props = {
   shouldShowRedirectModal?: boolean;
   showRedirectModal: (to: string) => void;
   redirectPopupTimestamp: number;
-  children?: ReactNode;
+  children?: any;
 };
 
 export function HeaderLink({

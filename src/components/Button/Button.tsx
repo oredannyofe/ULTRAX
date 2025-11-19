@@ -1,4 +1,4 @@
-import { ReactNode, HTMLProps } from "react";
+import { HTMLProps } from "react";
 import cx from "classnames";
 import ButtonLink from "./ButtonLink";
 import "./Button.scss";
@@ -6,7 +6,7 @@ import "./Button.scss";
 type ButtonVariant = "primary" | "primary-action" | "secondary";
 
 type ButtonProps = HTMLProps<HTMLButtonElement> & {
-  children: ReactNode;
+  children: any;
   variant: ButtonVariant;
   className?: string;
   textAlign?: "center" | "left" | "right";

@@ -1,9 +1,9 @@
-import { ReactNode } from "react";
+import React from "react";
 import "./ConnectWalletButton.scss";
 
 type Props = {
   imgSrc?: string;
-  children: ReactNode;
+  children: any;
   onClick: () => void;
   className?: string;
 };
