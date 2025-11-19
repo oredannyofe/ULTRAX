@@ -1,10 +1,10 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import cx from "classnames";
 import openInNewTab from "img/open-new-tab.svg";
 
 type ButtonProps = {
-  children: ReactNode;
+  children: any;
   className: string;
   to: string;
   showExternalLinkArrow: boolean;
