@@ -66,7 +66,7 @@ import Jobs from "pages/Jobs/Jobs";
 import { i18n } from "@lingui/core";
 import { I18nProvider } from "@lingui/react";
 import { Trans, t } from "@lingui/macro";
-import { defaultLocale, dynamicActivate } from "lib/i18n";
+import { defaultLocale } from "lib/i18n";
 import { Header } from "components/Header/Header";
 import { ARBITRUM, FTM_TESTNET, getAlchemyWsUrl, getExplorerUrl, U2U_TESTNET } from "config/chains";
 import { useLocalStorageSerializeKey } from "lib/localStorage";
@@ -654,15 +654,15 @@ function FullApp() {
 function App() {
   useScrollToTop();
   useEffect(() => {
-    // Ensure we always activate a real catalog ("en") in production so
-    // Lingui does not render hashed message IDs like "07iJX7".
     const enforcedLocale = defaultLocale;
     try {
       localStorage.setItem(LANGUAGE_LOCALSTORAGE_KEY, enforcedLocale);
     } catch (e) {
       // ignore storage errors (private mode, etc.)
     }
-    dynamicActivate(enforcedLocale);
+    // We already patched i18n._ to always return the source English
+    // message, so just set the active locale id.
+    i18n.activate(enforcedLocale);
   }, []);
   return (
     <SWRConfig value={{ refreshInterval: 5000 }}>

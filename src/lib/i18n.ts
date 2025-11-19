@@ -18,6 +18,23 @@ export const locales = {
 
 export const defaultLocale = "en";
 
+// Always prefer the source English message from Lingui descriptors so that
+// we never render hashed ids like "07iJX7" when catalogs are missing or
+// misconfigured. This effectively turns i18n into a no-op that shows the
+// original English copy.
+const originalTranslate = i18n._.bind(i18n);
+(i18n as any)._ = (descriptor: any, ...args: any[]) => {
+  if (descriptor && typeof descriptor === "object") {
+    if (descriptor.message) {
+      return descriptor.message;
+    }
+    if (descriptor.id) {
+      return descriptor.id;
+    }
+  }
+  return originalTranslate(descriptor as any, ...args);
+};
+
 i18n.loadLocaleData({
   en: { plurals: en },
   es: { plurals: es },
